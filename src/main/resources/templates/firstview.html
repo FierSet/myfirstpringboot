@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <th:block th:replace="~{fragments/assets :: assets}"></th:block>
+    <title>first page</title>
+</head>
+<body>
+    
+    <h1>Welcome to the First View</h1>
+    <p>This is a simple view in our Spring Boot application.</p>
+    <button onclick="window.location.href='/secondview'">Go to Second View</button>
+
+    
+</body>
+</html>

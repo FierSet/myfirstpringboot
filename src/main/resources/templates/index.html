@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <th:block th:replace="~{fragments/assets :: assets}"></th:block>
+    <title>Home</title>
+</head>
+    <body>
+
+        <div class="container-main">
+
+            <div class="sub-container">
+                <div class="subtext">
+                <h2>Welcome to links shortener, you can use it to shorten your links!</h2>
+                <p>This application demonstrates a simple Spring Boot setup with Thymeleaf templates.</p>
+                <p>It's a simple and efficient way to create shorter URLs for sharing.</p>
+                <p>Just paste your link and get a shortened version!</p>
+                </div>
+            </div>
+
+            <div class="sub-container">
+                <div class="sub-container1">
+                    <img th:src="@{/images/img4.png}" alt="img">
+
+                    <form class="shortlink"
+                    onsubmit="event.preventDefault(); 
+                    shortenLink(document.getElementById('link').value, 'shortened-link');"
+                    >
+                        <input type="text" id="link" placeholder="Exhample: https://www.page.com" />
+                        <button type="submit">Shorten</button>
+                    </form>
+
+                    <div class="result">
+                        <span id="shortened-link"></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="site-footer">
+            <p>&copy; 2026 Development and designed by Miguel Angel Ortega Zacarias - <a href="https://portfolio-miguelortega-g5afh4dnhxg2d2a8.mexicocentral-01.azurewebsites.net">Portfolio</a></p>
+        </footer>
+
+    </body>
+</html>
